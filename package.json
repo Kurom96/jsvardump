@@ -1,0 +1,18 @@
+{
+  "name": "jsdump",
+  "version": "1.0.0",
+  "description": "Output javascript object using console.log.",
+  "main": "jsdump.js",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "KazuhikoKuroda",
+  "license": "MIT"
+}
