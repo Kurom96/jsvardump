@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Output javascript object using console.log.",
   "main": "jsdump.js",
-  "dependencies": {
-    "underscore": "^1.8.3"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
