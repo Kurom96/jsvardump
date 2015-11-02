@@ -1,22 +1,29 @@
 {
-  "name": "jsvardump",
-  "version": "0.0.1",
-  "description": "Output javascript object like PHP(var_dump) using console.log.",
-  "main": "jsvardump.js",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
-  "keywords": [
-    "javascript"
-  ],
-  "author": "kurom96",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://KazuhikoKuroda@github.com/KazuhikoKuroda/jsvardump.git"
-  },
-  "bugs": {
-    "url": "https://github.com/KazuhikoKuroda/jsvardump/issues"
-  },
-  "homepage": "https://github.com/KazuhikoKuroda/jsvardump"
+    "name": "jsvardump",
+    "version": "0.0.2",
+    "description": "Output javascript object like PHP(var_dump) using console.log.",
+    "main": "jsvardump.js",
+    "dependencies": {},
+    "devDependencies": {
+        "jshint": "^2.8.0",
+        "uglify-js": "^2.5.0"
+    },
+    "scripts": {
+        "test": "npm run jshint",
+        "jshint": "jshint jsvardump.js",
+        "build": "uglifyjs jsvardump.js -c \"evaluate=false\" --comments \"/    .*/\" -m --source-map jsvardump-min.map -o jsvardump-min.js"
+    },
+    "keywords": [
+        "javascript"
+    ],
+    "author": "kurom96",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://KazuhikoKuroda@github.com/KazuhikoKuroda/jsvardump.git"
+    },
+    "bugs": {
+        "url": "https://github.com/KazuhikoKuroda/jsvardump/issues"
+    },
+    "homepage": "https://github.com/KazuhikoKuroda/jsvardump"
 }

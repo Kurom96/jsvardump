@@ -1,0 +1,2 @@
+var dump=function(o,n){n=n||0;var r,t="";for(r=0;n>r;r++)t+="|   ";for(var c in o){var e=o[c];isObject(e)?(console.log(t+c),dump(e,n+1)):console.log(t+c+":"+e)}},isObject=function(o){var n=typeof o;return"function"===n||"object"===n&&!!o};exports.dump=dump;
+//# sourceMappingURL=jsvardump-min.map

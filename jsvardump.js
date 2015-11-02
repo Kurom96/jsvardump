@@ -13,9 +13,11 @@ var dump = function(obj, indent) {
 		}
 		console.log(sp + key + ':' + item);
 	}
-}
+};
+
 var isObject = function(item) {
 	var type = typeof item;
 	return type === 'function' || type === 'object' && !!item;
-}
+};
+
 exports.dump = dump;
