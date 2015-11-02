@@ -2,7 +2,7 @@
 
 Output javascript object like PHP(var_dump) using console.log.
 
-### howtouse
+### HowToUse
 
 ```sh
 $ npm install jsvardump
@@ -15,16 +15,14 @@ var jvd = require('jsvardump');
 
 var object = {
 	arr: [[1,11,111,{hoge:'aaa'}], 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
-	obj: {
-		'key': 'value',
-		'date': Date.now()
-	},
+	obj: {'key': 'value','date': Date.now()},
 	str: 'some string'
 };
 
 jvd.dump(object);
 ```
 
+console output
 ```
 arr
 |   0
