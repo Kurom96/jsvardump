@@ -1,4 +1,4 @@
-var jd = require('./jsdump');
+var jvd = require('./jsvardump');
 
 var object = {
 	arr: [[1,11,111,{hoge:'aaa'}], 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
@@ -8,4 +8,4 @@ var object = {
 	},
 	str: 'some string'
 };
-jd.dump(object);
+jvd.dump(object);

@@ -1,16 +1,22 @@
 {
-  "name": "jsdump",
-  "version": "1.0.0",
-  "description": "Output javascript object using console.log.",
-  "main": "jsdump.js",
+  "name": "jsvardump",
+  "version": "0.0.1",
+  "description": "Output javascript object like PHP(var_dump) using console.log.",
+  "main": "jsvardump.js",
   "dependencies": {},
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "keywords": [
     "javascript"
   ],
-  "author": "KazuhikoKuroda",
-  "license": "MIT"
+  "author": "kurom96",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://KazuhikoKuroda@github.com/KazuhikoKuroda/jsvardump.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KazuhikoKuroda/jsvardump/issues"
+  },
+  "homepage": "https://github.com/KazuhikoKuroda/jsvardump"
 }
