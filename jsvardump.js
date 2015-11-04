@@ -1,23 +1,54 @@
 var dump = function(obj, indent) {
-	indent = indent || 0;
-	var sp = '', i;
-	for (i = 0; i < indent; i++) {
-		sp = sp + '|   ';
+
+	if (!isObject(obj)) {
+		console.log(obj);
+		return;
 	}
-	for (var key in obj) {
-		var item = obj[key];
+
+	if (!indent) {
+		console.log(typeof obj);
+		indent = indent || '';
+	}
+
+	var myindent,
+		childindent,
+		len = Object.keys(obj).length,
+		index = 0,
+		key,
+		item;
+
+	for (key in obj) {
+		index++;
+		item = obj[key];
+
+		myindent = indent + '├─ ';
+		childindent = indent + '│  ';
+		if (index === len) {
+			myindent = indent + '└─ ';
+			childindent = indent + '   ';
+		}
+
 		if (isObject(item)) {
-			console.log(sp + key);
-			dump(item, indent + 1);
+			console.log(myindent + key);
+			dump(item, childindent);
 			continue;
 		}
-		console.log(sp + key + ':' + item);
+
+		if (isFunction(item)) {
+			item = typeof item;
+		}
+		console.log(myindent + key + ':' + item);
 	}
 };
 
 var isObject = function(item) {
 	var type = typeof item;
-	return type === 'function' || type === 'object' && !!item;
+	return type === 'object' && !!item;
+};
+
+var isFunction = function(item) {
+	var type = typeof item;
+	return type === 'function';
 };
 
 exports.dump = dump;

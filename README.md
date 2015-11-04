@@ -1,43 +1,48 @@
-# jsvardump
+jsvardump
+====
 
 Output javascript object like PHP(var_dump) using console.log.
 
-### HowToUse
+### Install
 
 ```sh
 $ npm install jsvardump
 ```
 
-### example
+### Usage
 
 ```javascript
 var jvd = require('jsvardump');
 
 var object = {
-	arr: [[1,11,111,{hoge:'aaa'}], 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
-	obj: {'key': 'value','date': Date.now()},
+	arr: [[1,11,111,{hoge:'aaa', fuga:'bbb'}], 'ccc', 'ddd'],
+	obj: {'key': 'value', 'date': Date.now(), 'func': function(){console.log(1);}},
 	str: 'some string'
 };
 
 jvd.dump(object);
 ```
 
-console output
+**console output**
 ```
-arr
-|   0
-|   |   0:1
-|   |   1:11
-|   |   2:111
-|   |   3
-|   |   |   hoge:aaa
-|   1:bbb
-|   2:ccc
-|   3:ddd
-|   4:eee
-|   5:fff
-obj
-|   key:value
-|   date:1446430828339
-str:some string
+object
+├─ arr
+│  ├─ 0
+│  │  ├─ 0:1
+│  │  ├─ 1:11
+│  │  ├─ 2:111
+│  │  └─ 3
+│  │     ├─ hoge:aaa
+│  │     └─ fuga:bbb
+│  ├─ 1:ccc
+│  └─ 2:ddd
+├─ obj
+│  ├─ key:value
+│  ├─ date:1446602447382
+│  └─ func:function
+└─ str:some string
 ```
+
+### License
+
+[MIT](https://github.com/KazuhikoKuroda/jsvardump/blob/master/LICENSE)

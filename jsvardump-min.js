@@ -1,2 +1,2 @@
-var dump=function(o,n){n=n||0;var r,t="";for(r=0;n>r;r++)t+="|   ";for(var c in o){var e=o[c];isObject(e)?(console.log(t+c),dump(e,n+1)):console.log(t+c+":"+e)}},isObject=function(o){var n=typeof o;return"function"===n||"object"===n&&!!o};exports.dump=dump;
+var dump=function(o,n){if(!isObject(o))return void console.log(o);n||(console.log(typeof o),n=n||"");var t,e,c,i,u=Object.keys(o).length,r=0;for(c in o)r++,i=o[c],t=n+"├─ ",e=n+"│  ",r===u&&(t=n+"└─ ",e=n+"   "),isObject(i)?(console.log(t+c),dump(i,e)):(isFunction(i)&&(i=typeof i),console.log(t+c+":"+i))},isObject=function(o){var n=typeof o;return"object"===n&&!!o},isFunction=function(o){var n=typeof o;return"function"===n};exports.dump=dump;
 //# sourceMappingURL=jsvardump-min.map
