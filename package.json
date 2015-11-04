@@ -1,6 +1,6 @@
 {
     "name": "jsvardump",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "description": "Output javascript object like PHP(var_dump) using console.log.",
     "main": "jsvardump.js",
     "dependencies": {},
@@ -13,8 +13,17 @@
         "jshint": "jshint jsvardump.js",
         "build": "uglifyjs jsvardump.js -c \"evaluate=false\" --comments \"/    .*/\" -m --source-map jsvardump-min.map -o jsvardump-min.js"
     },
+    "files": [
+        "jsvardump.js",
+		"jsvardump-min.js",
+		"jsvardump-min.map",
+		"LICENSE",
+        "package.json",
+        "README.md"
+    ],
     "keywords": [
-        "javascript"
+        "javascript",
+        "dump"
     ],
     "author": "kurom96",
     "license": "MIT",
