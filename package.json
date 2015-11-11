@@ -1,38 +1,40 @@
 {
-    "name": "jsvardump",
-    "version": "1.0.0",
-    "description": "Output javascript object like PHP(var_dump) using console.log.",
-    "main": "jsvardump.js",
-    "dependencies": {},
-    "devDependencies": {
-        "jshint": "^2.8.0",
-        "uglify-js": "^2.5.0"
-    },
-    "scripts": {
-        "test": "npm run jshint",
-        "jshint": "jshint jsvardump.js",
-        "build": "uglifyjs jsvardump.js -c \"evaluate=false\" --comments \"/    .*/\" -m --source-map jsvardump-min.map -o jsvardump-min.js"
-    },
-    "files": [
-        "jsvardump.js",
-		"jsvardump-min.js",
-		"jsvardump-min.map",
-		"LICENSE",
-        "package.json",
-        "README.md"
-    ],
-    "keywords": [
-        "javascript",
-        "dump"
-    ],
-    "author": "kurom96",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://KazuhikoKuroda@github.com/KazuhikoKuroda/jsvardump.git"
-    },
-    "bugs": {
-        "url": "https://github.com/KazuhikoKuroda/jsvardump/issues"
-    },
-    "homepage": "https://github.com/KazuhikoKuroda/jsvardump"
+  "name": "jsvardump",
+  "version": "1.0.0",
+  "description": "Output javascript object like PHP(var_dump) using console.log.",
+  "main": "jsvardump.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.3",
+    "uglify-js": "^2.5.0"
+  },
+  "scripts": {
+    "test": "npm run jshint && npm run mochatest",
+    "jshint": "jshint jsvardump.js",
+	"mochatest": "mocha test.js",
+    "build": "uglifyjs jsvardump.js -c \"evaluate=false\" --comments \"/    .*/\" -m --source-map jsvardump-min.map -o jsvardump-min.js"
+  },
+  "files": [
+    "jsvardump.js",
+    "jsvardump-min.js",
+    "jsvardump-min.map",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "javascript",
+    "dump"
+  ],
+  "author": "kurom96",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://KazuhikoKuroda@github.com/KazuhikoKuroda/jsvardump.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KazuhikoKuroda/jsvardump/issues"
+  },
+  "homepage": "https://github.com/KazuhikoKuroda/jsvardump"
 }

@@ -1,6 +1,8 @@
 jsvardump
 ====
 
+[![Circle CI](https://circleci.com/gh/KazuhikoKuroda/jsvardump.svg?style=svg)](https://circleci.com/gh/KazuhikoKuroda/jsvardump)
+
 Output javascript object like PHP(var_dump) using console.log.
 
 ### Install
