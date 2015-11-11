@@ -1,6 +1,6 @@
 {
   "name": "jsvardump",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Output javascript object like PHP(var_dump) using console.log.",
   "main": "jsvardump.js",
   "dependencies": {},
