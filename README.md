@@ -2,6 +2,7 @@ jsvardump
 ====
 
 [![Circle CI](https://circleci.com/gh/KazuhikoKuroda/jsvardump.svg?style=svg)](https://circleci.com/gh/KazuhikoKuroda/jsvardump)
+[![Coverage Status](https://coveralls.io/repos/KazuhikoKuroda/jsvardump/badge.svg?branch=master&service=github)](https://coveralls.io/github/KazuhikoKuroda/jsvardump?branch=master)
 
 Output javascript object like PHP(var_dump) using console.log.
 

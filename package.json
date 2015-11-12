@@ -1,18 +1,21 @@
 {
   "name": "jsvardump",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Output javascript object like PHP(var_dump) using console.log.",
   "main": "jsvardump.js",
   "dependencies": {},
   "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.0",
     "jshint": "^2.8.0",
     "mocha": "^2.3.3",
     "uglify-js": "^2.5.0"
   },
   "scripts": {
-    "test": "npm run jshint && npm run mochatest",
+    "test": "npm run jshint && npm run mochatest && npm run coverage",
     "jshint": "jshint jsvardump.js",
-	"mochatest": "mocha test.js",
+    "mochatest": "mocha test.js",
+    "coverage": "istanbul cover _mocha test.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "build": "uglifyjs jsvardump.js -c \"evaluate=false\" --comments \"/    .*/\" -m --source-map jsvardump-min.map -o jsvardump-min.js"
   },
   "files": [
