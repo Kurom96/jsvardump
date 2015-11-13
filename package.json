@@ -15,7 +15,7 @@
     "test": "npm run jshint && npm run mochatest && npm run coverage",
     "jshint": "jshint jsvardump.js",
     "mochatest": "mocha test.js",
-    "coverage": "istanbul cover _mocha test.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "coverage": "istanbul cover -x 'test.js' _mocha test.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "build": "uglifyjs jsvardump.js -c \"evaluate=false\" --comments \"/    .*/\" -m --source-map jsvardump-min.map -o jsvardump-min.js"
   },
   "files": [
